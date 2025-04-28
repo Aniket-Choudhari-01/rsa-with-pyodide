@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>RSA Encryption with Python (Pyodide)</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.24.1/full/pyodide.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="main-heading">Network Security Assignment - (CS1702)</h2>
+        <h3>RSA Encryption - Python in Browser</h3>
+        <form>
+            <label for="message">Enter Plain Text Message:</label><br>
+            <input type="text" id="message" placeholder="Enter your message here" required />
+            <button onclick="runRSA(event)">Run RSA Algorithm</button>
+        </form>
+        <div class="output">
+            <pre id="originalMessage"></pre>
+            <pre id="publicKey"></pre>
+            <pre id="privateKey"></pre>
+            <pre id="cipherText"></pre>
+            <pre id="decryptedMessage"></pre>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
