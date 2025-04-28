@@ -1,19 +1,22 @@
 
-# RSA Encryption Algorithm (CS1702)
+# Simple RSA Encryption and Decryption in Python
+Assignment work done for the CS1702 (Network Security) course of our 6th Semester.
 
 ## Table of Contents
-1. [Aim](#aim)
-2. [Implementation](#implementation)
-3. [Key Generation](#key-generation)
-4. [Encryption Process](#encryption-process)
-5. [Decryption Process](#decryption-process)
-6. [Prime Number Generation](#prime-number-generation)
-7. [GCD and Mod Inverse](#gcd-and-mod-inverse)
-8. [Live Demo](#live-demo)
-9. [Conclusion](#conclusion)
+- [Aim](#aim)
+- [Implementation](#implementation)
+   - [Key Generation](#key-generation)
+   - [Encryption Process](#encryption-process)
+   - [Decryption Process](#decryption-process)
+   - [Prime Number Generation](#prime-number-generation)
+   - [GCD and Mod Inverse](#gcd-and-mod-inverse)
+- [Live Demo](#live-demo)
+- [Output](#output)
+- [Conclusion](#conclusion)
+- [References](#references)
 
 ## Aim
-The aim of this project is to implement the RSA encryption algorithm using Python in the browser with Pyodide. This demonstration provides a way to encrypt and decrypt messages using the public and private keys, with a visual representation of each step in the algorithm.
+The aim of this project is to implement the RSA encryption algorithm using Python. It provides a way to encrypt and decrypt messages using the public and private keys, with a visual representation of each step in the algorithm.
 
 ## Implementation
 The RSA algorithm is implemented entirely in the browser using Pyodide, which allows Python code to run within the browser environment. The process involves:
@@ -37,16 +40,14 @@ The RSA algorithm is implemented entirely in the browser using Pyodide, which al
 ## Encryption Process
 1. **Plaintext Conversion:** The plaintext message is converted into a numerical form using the ASCII values of each character.
 2. **Encryption Formula:** The encrypted message (ciphertext) is obtained using the formula:
-   \[
-   \text{ciphertext} = \text{message}^e \mod n
-   \]
+    `ciphertext` = (message)<sup>e</sup> mod n
 3. The ciphertext is then displayed on the webpage for the user.
 
 ## Decryption Process
 1. **Ciphertext Decryption:** The encrypted ciphertext is decrypted using the private key `d`:
-   \[
-   \text{decrypted message} = \text{ciphertext}^d \mod n
-   \]
+   
+   `decrypted message` = (ciphertext)<sup>d</sup> mod n
+   
 2. The decrypted message is converted back into readable text and displayed.
 
 ## Prime Number Generation
@@ -58,7 +59,14 @@ Prime numbers `p` and `q` are essential for key generation. A random number is s
 
 ## Live Demo
 You can interact with the live demo of this RSA encryption algorithm by visiting the following link:  
-[**Live RSA Demo**](https://your-live-demo-link.com)
+[**Live RSA Demo**](https://rsa-with-pyodide.vercel.app/)
+
+## Output
+![image](https://github.com/user-attachments/assets/acd1f68d-9188-4711-afae-d724be70d98f)
 
 ## Conclusion
 This project demonstrates the RSA encryption algorithm implemented in Python using Pyodide, providing a simple and effective way to encrypt and decrypt messages using public and private keys. The process involves key generation, encryption, and decryption based on modular arithmetic and prime number properties.
+
+## References
+- RSA Algorithm - [Wikipedia](https://en.wikipedia.org/wiki/RSA_(cryptosystem))
+- SymPy Documentation (for `isprime` and `mod_inverse`) - [SymPy](https://docs.sympy.org/latest/index.html)
